@@ -16,8 +16,6 @@ setlocale(LC_TIME, 'fr_FR.utf8','fra');
 	<body>
 		<h1>Température</h1>
 		
-<!--faire varier le trait rouge en fonction de la temperature
-mettre à jour votre dépôt sur GitHub-->
 		<p>Il fait <?php echo $tuff->temperature; ?>° avec <?php echo $tuff->humidite ?>% d'humidité.</p>
 		
 		<p>Dernière mise à jour : <?php echo strftime("%A %d %B %Y à %H:%M:%S", filemtime('data.txt')); ?>.</p>
@@ -26,5 +24,6 @@ mettre à jour votre dépôt sur GitHub-->
 			<div id="bargraph"></div>
 		</div>
 
+		<?php echo '<style>#bargraph{height:' . (161 + $tuff->temperature * 4) .'px;top:' . (315 - $tuff->temperature * 4) . 'px;}</style>'; ?>
 	</body>
 </html>
