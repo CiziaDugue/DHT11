@@ -1,8 +1,8 @@
 <!doctype html>
 <?php
 //Récupération de l'objet json
-$
-$pageTemp = file_get_contents('data.txt');
+$fileName = 'data.txt';
+$pageTemp = file_get_contents($fileName);
 $data = json_decode($pageTemp);
 
 //Configuration du format de la date de maj
@@ -16,9 +16,10 @@ $bargraphTop = 315 - $data->temperature * 4;
 ?>
 <html>
 	<head>
-		<title>Thermomètre</title>
+		<title>DHT11 NodeMCU</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
+		<meta http-equiv="refresh" content="1">
 		<link href="main.css" type="text/css" rel="stylesheet">
 	</head>
 
@@ -30,9 +31,8 @@ $bargraphTop = 315 - $data->temperature * 4;
 		<p>Dernière mise à jour : <?php echo $majTime; ?>.</p>
 		
 		<div id="thermometer">
-			<div id="bargraph"></div>
+			<div id="bargraph" style="height: <?php echo $bargraphHeight ; ?>px; top: <?php echo $bargraphTop ; ?>px;"></div>
 		</div>
 
-		<?php echo '<style>#bargraph{height:' . $bargraphHeight .'px;top:' . $bargraphTop . 'px;}</style>'; ?>
 	</body>
 </html>
