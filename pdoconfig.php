@@ -2,4 +2,4 @@
     $host = 'localhost';
     $dbname = 'dht11';
     $username = 'dht11';
-    $password = 'fsé#At6/1;!ui?';
+    $password = 'etg?45èàg41M(jsg!D';
