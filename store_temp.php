@@ -30,7 +30,7 @@ if (! $op) {
 }
 
 //Ecriture en bdd
-try {
+//try {
 	//Connexion
 	$bdd = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 	echo "Connected to $dbname at $host successfully.";
@@ -53,9 +53,9 @@ try {
 	$req = null;
 
 	$bdd = null;
-}
+/*}
 catch (PDOException $e) {
 	echo "Erreur : " . $e->getMessage() . "<br/>";
 	die();
-}
+}*/
 ?>
