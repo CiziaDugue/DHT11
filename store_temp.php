@@ -45,7 +45,7 @@
 			$datetime = filemtime('store_temp.php');
 
 			//Préparation de la requête
-			$req = $bdd->prepare('INSERT INTO releves_dht11 (datetime, temperature, humidite)'.'VALUES (:datetime, :temperature, :humidite)');
+			$req = $bdd->prepare('INSERT INTO releves_dht11 (datetime, temperature, humidite)'.' VALUES (:datetime, :temperature, :humidite)');
 
 			//Requête SQL
 			$req->execute(array(
