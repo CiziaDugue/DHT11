@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>PDO 1 : Connexion</title>
+        <title>DHT11 Traitement</title>
 
         
     </head>
