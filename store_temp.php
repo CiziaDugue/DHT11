@@ -6,7 +6,7 @@
 
         
     </head>
-    <body>
+    <body>sdygyuqdqjshfbq
 		<?php
 
 		//Paramètre
