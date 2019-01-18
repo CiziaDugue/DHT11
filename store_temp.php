@@ -30,32 +30,33 @@ if (! $op) {
 }
 
 //Ecriture en bdd
-//try {
+try {
 	//Connexion
 	$bdd = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 	echo "Connected to $dbname at $host successfully.";
-
-	//Recupération de la date de MAJ
-	//$datetime = filemtime('store_temp.php');
-	$now = getdate();
-
-	//Préparation de la requête
-	$req = $bdd->prepare('INSERT INTO releves_dht11 (temperature, humidite)'.' VALUES (:temperature, :humidite)');
-
-	//Requête SQL
-	$req->execute(array(
-		'temperature' => $data->temperature,
-		'humidite' => $data->humidite
-		));
-	//Affichage du résultat
-	echo('<div>Un nouveau relevé a été ajouté en bdd à '.$now.' : Température '.$data->temperature.'°C - Humidité '.$data->humidite.'%</div>');
-
-	$req = null;
-
-	$bdd = null;
-/*}
+}
 catch (PDOException $e) {
 	echo "Erreur : " . $e->getMessage() . "<br/>";
 	die();
-}*/
+}
+
+//Recupération de la date de MAJ
+//$datetime = filemtime('store_temp.php');
+//$now = getdate();
+
+//Préparation de la requête
+$req = $bdd->prepare('INSERT INTO releves_dht11 (temperature, humidite)'.' VALUES (:temperature, :humidite)');
+
+//Requête SQL
+$req->execute(array(
+	'temperature' => $data->temperature,
+	'humidite' => $data->humidite
+	));
+//Affichage du résultat
+echo('<div>Un nouveau relevé a été ajouté en bdd à '.$now.' : Température '.$data->temperature.'°C - Humidité '.$data->humidite.'%</div>');
+
+$req = null;
+
+$bdd = null;
+
 ?>
