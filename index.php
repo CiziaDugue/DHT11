@@ -1,9 +1,9 @@
 <!doctype html>
 <?php
 //Inclusion des classes de la librairie pChart
-include("class/pDraw.class.php");
+/*include("class/pDraw.class.php");
 include("class/pImage.class.php");
-include("class/pData.class.php");
+include("class/pData.class.php");*/
 
 //Récupération de l'objet json
 $fileName = 'data.txt';
@@ -20,11 +20,11 @@ $bargraphHeight = 161 + $data->temperature * 4;
 $bargraphTop = 315 - $data->temperature * 4;
 
 //Création d'un objet pData
-$dataChart = new pData();
+/*$dataChart = new pData();*/
 
 //Connexion à la base de données
-$db = mysql_connect("localhost", "dht11", "etg?45èàg41M(jsg!D");
-mysql_select_db("pchart",$db);
+/*$db = mysql_connect("localhost", "dht11", "etg?45èàg41M(jsg!D");
+mysql_select_db("pchart",$db);*/
 ?>
 <html>
 	<head>
@@ -53,7 +53,7 @@ mysql_select_db("pchart",$db);
 		
 		<?php
 			// Requête en bdd pour récupérer les données
-			$Requete = "SELECT * FROM `releves_dht11`";
+			/*$Requete = "SELECT * FROM `releves_dht11`";
 			$Result  = mysql_query($Requete,$db);
 			$timestamp="";
 			$temperature="";
@@ -87,7 +87,7 @@ mysql_select_db("pchart",$db);
 
 			//Humidité sur le second axe y
 			$dataChart->setAxisName(1,"Humidité");
-			$dataChart->setAxisUnit(0,"%");
+			$dataChart->setAxisUnit(0,"%");*/
 			
 			
 

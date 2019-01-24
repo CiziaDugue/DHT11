@@ -101,6 +101,7 @@ void loop()
       Serial.print(hum);
       Serial.println("%. Send to VPS.");
       }
+	
       Serial.println("Waiting...");
   
   // mise à jour des données toutes les heures
